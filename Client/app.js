@@ -1,9 +1,4 @@
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>;
-<link href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf_viewer.min.css" rel="stylesheet" type="text/css" />;
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>;
-
-// import axios from "axios";
+import axios from "axios";
 
 const loadURL = axios.get("http://localhost:3000/auth/Load-PDF-File");
 console.log(loadURL.data);
@@ -14,7 +9,6 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 var pdfDoc = null;
 var scale = 1; //Set Scale for zooming PDF.
 var resolution = 1; //Set Resolution to Adjust PDF clarity.
-
 
 
 

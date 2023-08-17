@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Put,StreamableFile } from "@nestjs/common";
+import { Body, Controller, Get, Post, Put,StreamableFile, UseInterceptors } from "@nestjs/common";
 import { DatabaseService } from "../domain/service";
 import { PDFService } from '@t00nday/nestjs-pdf';
 import { createReadStream } from 'fs';
@@ -19,9 +19,11 @@ constructor(private databaseservice: DatabaseService){}
   
 
 @Post('Save-PDF-File')
-savePDF(){
-return 'Saved PDF File';
+@UseInterceptors(FileInterceptor('pdf', { dest: 'Nestjsapp/Server/src/example.pdf' })){
+  uploadfile(@UploadedFiles() File): string {
+    return 'success';
     }
+  }
 }
 
 
