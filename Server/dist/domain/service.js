@@ -13,4 +13,4 @@ let DatabaseService = exports.DatabaseService = class DatabaseService {
 exports.DatabaseService = DatabaseService = __decorate([
     (0, common_1.Injectable)({})
 ], DatabaseService);
-//# sourceMappingURL=database.service.js.map
+//# sourceMappingURL=service.js.map

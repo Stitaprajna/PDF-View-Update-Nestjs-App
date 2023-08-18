@@ -13,7 +13,7 @@ export class DatabaseController {
 constructor(private databaseservice: DatabaseService){}
   @Get('Load-PDF-File')
   getFile(): StreamableFile {
-    const file = createReadStream(join(process.cwd(), 'Nestjsapp/Server/src/example.pdf'));
+    const file = createReadStream(join(process.cwd(), 'PDF-View-Update-Nestjs-App/Server/src/example.pdf'));
     console.log('file read');
     return new StreamableFile(file);
   }
@@ -23,6 +23,7 @@ constructor(private databaseservice: DatabaseService){}
 @UseInterceptors(FileInterceptor('file'))
 uploadFile(@UploadedFile() file: Express.Multer.File) {
   console.log(file);
+  console.log('sucess');
 }
 
 }

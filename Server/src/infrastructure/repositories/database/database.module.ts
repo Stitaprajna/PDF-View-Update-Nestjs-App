@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
-import { DatabaseController } from "../../../usecases/database.controller";
-import { DatabaseService } from "../../../domain/database.service";
+import { DatabaseController } from "../../../usecases/controller";
+import { DatabaseService } from "../../../domain/service";
 
 @Module({
     controllers: [DatabaseController],
